@@ -1,0 +1,39 @@
+'''
+Rapid Script
+============
+
+This is a drag and drop script creating app. It's purpose is to allow
+quick bash script creation.  Its a work in progress, suggestions welcome.
+
+'''
+import kivy
+kivy.require('1.4.2')
+from kivy.app import App
+from kivy.uix.widget import Widget
+from kivy.properties import NumericProperty, ReferenceListProperty, ObjectProperty
+from kivy.vector import Vector
+#import os
+from kivy.uix.boxlayout import BoxLayout
+from kivy.uix.codeinput import CodeInput
+from kivy.animation import Animation
+from kivy.clock import Clock
+from kivy.graphics import Color
+from kivy.graphics import Rectangle
+
+class IfStatement(Widget):
+    pass
+
+# class Print(Widget):
+#     pass
+
+class RapidScriptMain(Widget):
+    box1 = ObjectProperty(None)
+    # box2 = ObjectProperty(None)
+
+class RapidScriptApp(App):
+    def build(self):
+        rsMain = RapidScriptMain()
+        return rsMain
+
+if __name__ == "__main__":
+    RapidScriptApp().run()

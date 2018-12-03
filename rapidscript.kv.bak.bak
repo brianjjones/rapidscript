@@ -1,0 +1,48 @@
+#:kivy 1.4.2
+
+<IfStatement>:
+    size: 50, 70
+    canvas:
+        Color:
+            rgba: 1, 0, 0, 1
+
+        Rectangle:
+            pos:self.pos
+            size:self.size
+        
+    Label:
+        font_size: 15  
+        center_x: self.width / 2
+        top: self.top
+        text: "If * then *"
+
+<Print>:
+    size: 50, 50
+ 
+    canvas:
+        Color:
+            rgba: 1, 2, 0, .8
+
+        Rectangle:
+            pos:self.pos
+            size:self.size
+        
+    Label:
+        font_size: 15  
+        center_x: self.width / 2
+        top: self.top
+        text: "Print"
+
+<RapidScriptMain>:
+    boxItem1: ifs1
+    boxItem2: prnt1
+
+    IfStatement:
+        id: ifs1
+        x: root.x + 15
+        center_y: root.center_y
+
+    Print:
+        id: prnt1
+        x: root.width-self.width
+        center_y: root.center_y + 50

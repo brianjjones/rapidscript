@@ -1,0 +1,35 @@
+#:kivy 1.4.2
+
+<IfStatement>:
+    size: 50, 50
+    Color:
+        rgba: 1, 0, 0, 1
+
+    canvas:
+        Rectangle:
+            pos:self.pos
+            size:self.size
+
+# <Print>:
+#     size: 50, 50
+#     Color:
+#         rgba: 0, 1, 0, .8
+
+#     canvas:
+#         Rectangle:
+#             pos:self.pos
+#             size:self.size
+
+<RapidScriptMain>:
+    boxItem1: is1
+    # boxItem2: prnt1
+
+    IfStatement:
+        id: is1
+        x: root.x
+        center_y: root.center_y
+
+    # Print:
+    #     id: prnt1
+    #     x: root.width-self.width
+    #     center_y: root.center_y
